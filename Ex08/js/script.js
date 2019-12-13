@@ -1,6 +1,17 @@
+function inicialMaiuscula(nome_separado){
+    for(let i=0; i<nome_separado.length; i++){
+        if(nome_separado[i] != "do" && nome_separado[i] != "da" && nome_separado[i] != "de"){
+            let inicial = nome_separado[i].charAt(0)
+            if(inicial!=inicial.toUpperCase()){
+                return false
+            }
+        }
+    }
+    return true
+}
 function verificarSobrenome(nome_separado){
     if(nome_separado.length>1){
-        return true
+        return inicialMaiuscula(nome_separado)
     }else{
         return false
     }
