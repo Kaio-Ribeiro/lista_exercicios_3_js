@@ -1,17 +1,17 @@
 function media(){
-    let cont=0, soma=0, parar=false
+    let cont=0, soma=0, cond=true
     let valor_digitado
 
-    while(!parar){
+    while(cond){
         valor_digitado = prompt("Digite uma nota")
-        if(valor_digitado.toUpperCase !='FIM'){
+        if(valor_digitado.toUpperCase() == "FIM"){
+            cond=false
+        }else{
             soma += Number(valor_digitado)
             cont++
-        }else{
-            parar=true
         }
     }
 
-    alert(soma/cont)
+    return alert(soma/cont)
 }
 media()
