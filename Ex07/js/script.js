@@ -1,3 +1,4 @@
+
 function qtdCaracteres(){
     let valor_digitado, qtd_char, qtd_letra
 
@@ -5,10 +6,12 @@ function qtdCaracteres(){
 
     qtd_char = valor_digitado.length
 
-    while(indexOf(' ') != -1){
-        valor_digitado = valor_digitado.replace(' ', '');
+    pos = valor_digitado.indexOf(" ")
+    while(pos!=-1){
+        valor_digitado = valor_digitado.replace(" ", "")
+        pos = valor_digitado.indexOf(" ")
     }
-	
+
     qtd_letra = valor_digitado.length
 
     return alert("Numero de caracteres: "+qtd_char+"\nNumero de letras: "+qtd_letra)
