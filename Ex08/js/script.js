@@ -14,12 +14,21 @@ function miniminoPrimeiroNome(nome){
         return false
     }
 }
+function verificarNumero(nome){
+    let n = nome.search(/[0-9]/)
+
+    if(n==-1){
+        return true
+    }else{
+        return false
+    }
+}
 function validarNome(){
     let nome
 
     nome = prompt("Digite seu nome completo")
 
-    let validar = miniminoPrimeiroNome(nome)
+    let validar = miniminoPrimeiroNome(nome) && verificarNumero(nome)
 
     if(validar){
         alert("Nome valido")
